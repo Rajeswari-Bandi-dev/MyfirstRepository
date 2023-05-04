@@ -1,0 +1,59 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_medium" style="width:100%;"> 
+                    <div class="slds-box">
+
+                    <p>Is this loan secured by a residential dwelling including: 1-4 Family home (condominium), Manufactured housing (with or without land), 
+                        Multi-family dwelling (five or more units), or a mixed-use property with >50% of the square footage for residential use?</p>
+                    <div class="slds-box slds-box_small">
+                        <lightning-button-menu alternative-text="Show menu" onselect={handleOnselect}> 
+                            <lightning-menu-item value="Yes" label="Yes"></lightning-menu-item>
+                            <lightning-menu-item value="No" label="No"></lightning-menu-item>
+                        </lightning-button-menu>
+                        &nbsp; &nbsp; 
+                        {selectedItemValue}
+                    </div>
+                
+
+                    <template if:true={valueisyes}>
+                        <p>Is any part of the loan/line of credit used to purchase a dwelling?</p>
+                        <div class="slds-box slds-box_small">
+                        <lightning-button-menu alternative-text="Show menu" onselect={handleqsnoneyes}>
+                            <lightning-menu-item value="Yes" label="Yes"></lightning-menu-item>
+                            <lightning-menu-item value="No" label="No"></lightning-menu-item>
+                        </lightning-button-menu>
+                        &nbsp; &nbsp; 
+                        {selectedqsnoneyes}
+                    </div>
+                    </template>
+
+
+                    <template if:true={valueisno}>
+                        <p>I certify that this loan IS NOT HMDA Reportable.</p>
+                        <div class="slds-box slds-box_small">
+                        <lightning-button-menu alternative-text="Show menu" onselect={handleqsnoneno}>
+                            <lightning-menu-item value="I certify that this loan IS NOT HMDA Reportable" label="I certify that this loan IS NOT HMDA Reportable."></lightning-menu-item>
+                        </lightning-button-menu>
+                        &nbsp; &nbsp; 
+                        {selectedqsnoneno} 
+                    </div>
+                    </template>
+
+
+                    <template if:true={secondvalueisno}>
+                        <p>If the loan is not a purchase, is any part of the loan/LOC satisfying and replacing a dwelling secured loan/LOC with at least one of the same borrowers?</p>
+                        <div class="slds-box slds-box_small">
+                            <lightning-button-menu alternative-text="Show menu" onselect={handleqsntwono}>
+                                <lightning-menu-item value="If the loan is not a purchase, is any part of the loan/LOC satisfying and replacing a dwelling secured loan/LOC with at least one of the same borrowers?" 
+                                label="If the loan is not a purchase, is any part of the loan/LOC satisfying and replacing a dwelling secured loan/LOC with at least one of the same borrowers?"></lightning-menu-item>
+                            </lightning-button-menu>
+                            &nbsp; &nbsp; 
+                            {selectedqsntwono} 
+                        </div>
+                    </template>
+
+
+            </div>
+        </div>
+    </lightning-card>
+</template>

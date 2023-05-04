@@ -1,0 +1,16 @@
+<!--htmlEmailEditor.html-->
+<template>
+    <div class="slds-p-around_xx-small">
+        <lightning-combobox
+            name="senderName"
+            label="Sender Display Name"
+            value={senderName}
+            placeholder="Select Sender"
+            options={options}
+            onchange={handleChange} >
+        </lightning-combobox>
+    
+        <p class="slds-p-top_xx-small">Selected sender's name is: {senderName}
+        </p>
+    </div>
+</template>

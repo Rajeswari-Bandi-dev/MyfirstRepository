@@ -1,0 +1,16 @@
+<apex:page >
+   	<!-- Code Copied from Button Configuration -->
+    <img id="liveagent_button_online_5735i0000000d8s" style="display: none; border: 0px none; cursor: pointer" onclick="liveagent.startChat('5735i0000000d8s')" src="https://nuwaresystemllp-dev-ed.my.salesforce-sites.com/resource/1676533235000/onlinebutto" /><img id="liveagent_button_offline_5735i0000000d8s" style="display: none; border: 0px none; " src="https://nuwaresystemllp-dev-ed.my.salesforce-sites.com/resource/1676533235000/onlinebutto" />
+<script type="text/javascript">
+if (!window._laq) { window._laq = []; }
+window._laq.push(function(){liveagent.showWhenOnline('5735i0000000d8s', document.getElementById('liveagent_button_online_5735i0000000d8s'));
+liveagent.showWhenOffline('5735i0000000d8s', document.getElementById('liveagent_button_offline_5735i0000000d8s'));
+});</script>
+    
+    <!-- Code Copied from Deployment -->
+    <script type='text/javascript' src='https://c.la2-c2-hnd.salesforceliveagent.com/content/g/js/57.0/deployment.js'></script>
+<script type='text/javascript'>
+liveagent.init('https://d.la2-c2-hnd.salesforceliveagent.com/chat', '5725i0000000bYT', '00D5i000007Dnbp');
+</script>
+    
+</apex:page>

@@ -1,0 +1,115 @@
+<template>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" 
+    aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+    <div class="slds-modal__container">
+
+        <!-- Modal/Popup Box LWC header here -->
+        <header class="slds-modal__header">
+            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" 
+                title="Close" 
+                onclick={closeModal}>
+                <lightning-icon 
+                    icon-name="utility:close"
+                    alternative-text="close"
+                    variant="inverse"
+                    size="small" >
+                </lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+            </button>
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Create New Contact Record</h2>
+        </header>
+
+        <!-- Modal/Popup Box LWC body starts here -->
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item class="slds-p-around_xx-small" size="12">
+                    <lightning-layout>
+        
+                        <lightning-layout-item class="slds-p-around_xx-small" size=6>
+    
+                            <!-- first name -->
+                            <lightning-input 
+                                label="First Name" 
+                                value={firstname} 
+                                onchange={contactHandleChange} 
+                                class="slds-m-bottom_x-small slds-p-horizontal_small slds-form-element">
+                            </lightning-input>
+    
+                            <!-- last name -->
+                            <lightning-input 
+                                label="Last Name" 
+                                value={lastname} 
+                                onchange={contactHandleChange}
+                                class="slds-m-bottom_x-small slds-p-horizontal_small slds-form-element" required>
+                            </lightning-input>     
+                            
+                            <!-- account name field, from another file -->
+                            <c-lwc-account-custom-lookup 
+                                onselected={myLookupHandle} >
+                            </c-lwc-account-custom-lookup><br/>
+    
+                        </lightning-layout-item> 
+    
+    
+                        <lightning-layout-item class="slds-p-around_xx-small" size=6>
+    
+                            <!-- Phone -->
+                            <lightning-input 
+                                label="Phone" 
+                                value={phone} 
+                                onchange={contactHandleChange} 
+                                class="slds-m-bottom_x-small slds-p-horizontal_small slds-form-element"  
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}$" 
+                                message-when-pattern-mismatch="Please enter a valid phone number">
+                            </lightning-input>
+                            
+                            <!-- Email -->
+                            <lightning-input 
+                                label="Email" 
+                                value={email} 
+                                onchange={contactHandleChange} 
+                                class="slds-m-bottom_x-small slds-p-horizontal_small slds-form-element" 
+                                pattern="[A-Za-z0-9._-]+@[a-z0-9-]+\.[a-z]{2,}$" 
+                                message-when-pattern-mismatch="Please enter a valid email">
+                            </lightning-input> 
+     
+                            <br>
+                            <!-- lead source field,from other file -->
+                            <c-newpractice 
+                                onchange={handlepicklist}>
+                            </c-newpractice>
+    
+                        </lightning-layout-item>
+                                     
+                    </lightning-layout>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+
+        <!-- Modal/Popup Box LWC footer starts here -->
+        <footer class="slds-modal__footer">
+            <div style="margin-left: 45%;">
+
+                <!-- cancel button -->
+                <lightning-button 
+                    label="Cancel" 
+                    onclick={closeModal} 
+                    class="slds-m-bottom_x-small slds-p-horizontal_small slds-form-element">
+                </lightning-button>
+
+                <!-- create button -->
+                <lightning-button 
+                    label="save" 
+                    variant="brand" 
+                    onclick={createLookupContactAction} 
+                    class="slds-m-bottom_x-small slds-p-horizontal_small slds-form-element">
+                </lightning-button>
+
+            </div>
+        </footer>
+        
+    </div>
+</section>
+<div class="slds-backdrop slds-backdrop_open"></div>
+    
+</template>

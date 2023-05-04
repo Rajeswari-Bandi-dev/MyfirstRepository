@@ -1,0 +1,9 @@
+<template>
+    <lightning-button variant="brand" label="Click Me" onclick={displayPopUp}></lightning-button>
+    <template if:true={showPopUp}>
+    <div class="custom-modal">
+    <h2>This is Pop-up Two</h2>
+    <lightning-button variant="brand" label="Close" onclick={closePopUp}></lightning-button>
+    </div>
+    </template>
+    </template>

@@ -1,0 +1,34 @@
+.slds-modal{
+    align-items: left;
+
+}
+.popup1{
+    width: 49vw;
+    height: 51vw;
+    align-items: left;
+}
+
+.c-multipopup2_multipopup2{
+    width: 46vw;
+    height: 16vw;
+    margin-top: 46vw;
+    margin-left: 5vw;
+}
+
+.model-popup1{
+    width: 50%;
+    height: 50%;
+    align-items: right;
+}
+
+.model-popup3{
+    width: 50%;
+    height: 50%;
+    align-items: left;
+}
+
+.model-popup4{
+    width: 50%;
+    height: 50%;
+    align-items: right;
+}

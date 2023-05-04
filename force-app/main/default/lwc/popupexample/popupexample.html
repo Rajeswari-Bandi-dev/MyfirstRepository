@@ -1,0 +1,119 @@
+<template>
+
+    <!-- 1st popup -->
+<div class="model1"> 
+    
+    <div class="button1">
+    <lightning-button class="open-button" label="Open Pop-up1" onclick={handleButtonClick1}></lightning-button>
+    </div>
+
+    <template if:true={showModal1}>
+      <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            
+            <header class="slds-modal__header">
+            </header>
+  
+            <div class="slds-modal__content" id="modal-content-id-1">
+                <p>popup1</p>
+            </div>
+
+            <footer class="slds-modal__footer">
+                <lightning-button label="OK" onclick={handleCloseClick1}></lightning-button>
+            </footer>
+
+        </div>
+      </section>
+    </template>
+
+</div>
+
+
+    
+    <!-- 2nd popup -->
+<div class="model2">
+
+    <div class="button2">
+    <lightning-button label="Open Pop-up2" onclick={handleButtonClick2}></lightning-button>
+    </div>
+
+    <template if:true={showModal2}>
+      <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+       
+            <header class="slds-modal__header">
+            </header>
+       
+            <div class="slds-modal__content" id="modal-content-id-2">
+                <p>popup2.</p>
+            </div>
+         
+            <footer class="slds-modal__footer">
+                <lightning-button label="OK" onclick={handleCloseClick2}></lightning-button>
+            </footer>
+        </div>
+    </section>
+
+</template>
+</div>
+
+
+<!-- 3rd popup -->
+<div class="model3"> 
+
+    <div class="button3">
+    <lightning-button class="open-button" label="Open Pop-up3" onclick={handleButtonClick3}></lightning-button>
+    </div>
+
+    <template if:true={showModal3}>
+      <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            
+            <header class="slds-modal__header">
+            </header>
+  
+            <div class="slds-modal__content" id="modal-content-id-3.">
+                <p>popup3.</p>
+            </div>
+
+            <footer class="slds-modal__footer">
+                <lightning-button label="OK" onclick={handleCloseClick3}></lightning-button>
+            </footer>
+
+        </div>
+      </section>
+    </template>
+
+</div>
+
+
+    
+    <!-- 4th popup -->
+<div class="model4">
+
+    <div class="button4">
+    <lightning-button label="Open Pop-up4" onclick={handleButtonClick4}></lightning-button>
+    </div>
+
+    <template if:true={showModal4}>
+      <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+       
+            <header class="slds-modal__header">
+            </header>
+       
+            <div class="slds-modal__content" id="modal-content-id-4">
+                <p>popup4.</p>
+            </div>
+         
+            <footer class="slds-modal__footer">
+                <lightning-button label="OK" onclick={handleCloseClick4}></lightning-button>
+            </footer>
+        </div>
+    </section>
+
+</template>
+</div>
+
+
+</template>

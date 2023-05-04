@@ -1,0 +1,27 @@
+<template>
+    <div class="wrapper">
+      <form>
+        <div>
+          <label for="address-one">Address line</label>
+          <input autocomplete="address-line1" required type="text" id="address-one" name="address-one">
+        </div>
+        <div>
+          <label for="city">City</label>
+          <input autocomplete="address-level2" required type="text" id="city" name="city">
+        </div>
+        <div>
+          <label for="state">State / Province / Region (optional)</label>
+          <input autcomplete="address-level1" type="text" id="state" name="state">
+        </div>
+        <div>
+   <label for="zip">ZIP / Postal code (optional)</label>
+          <input autocomplete="postal-code" type="text" id="zip" name="zip">
+        </div>
+        <div>
+   <label for="country">Country</label>
+          <input autocomplete="country" type="text" id="country" name="country">
+        </div>
+        <button>Save address</button>
+      </form>
+    </div>
+</template>

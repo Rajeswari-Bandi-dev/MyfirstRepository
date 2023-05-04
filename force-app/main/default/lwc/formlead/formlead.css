@@ -1,0 +1,17 @@
+.contentClass{
+    color:green;
+    font-weight: bold;
+}
+.btn {
+    cursor: pointer;
+    border: 2px solid blue;
+    background-color: lightblue;
+    width: 58px;
+    align-items: center;
+
+}
+img{
+    width: 53%;
+    height: 83%;
+    margin-left: 25%;
+}

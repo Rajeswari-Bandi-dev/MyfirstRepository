@@ -1,0 +1,67 @@
+/* 1st popup */
+.model1{
+    width: 50%;
+    height: 20VW;
+    border: 3px solid rgb(24, 24, 24);
+}
+.button1{
+    align-items: center;
+   
+}
+.model1 .slds-modal{
+    height: 19vw;
+    width: 40vw;
+    position: initial ;
+}
+
+
+/* 2nd popup */
+.model2{
+    width: 50%;
+    height: 20VW;
+    border: 3px solid rgb(24, 24, 24);
+    margin-left: auto;
+    margin-top: -20vw;
+    }
+.button2{
+    align-items: center;
+}
+.model2 .slds-modal{
+    width: 40vw;
+    position: initial;
+}
+
+
+/* 3rd popup */
+.model3
+{
+    width: 50%;
+    height: 20VW;
+    border: 3px solid rgb(24, 24, 24);
+    }
+.button3{
+    align-items: center;
+}
+.model3 .slds-modal{
+    width: 40vw;
+    position: initial;
+}
+
+
+/* 4th popup */
+.model4{
+    width: 50%;
+    height: 20VW;
+    border: 3px solid rgb(24, 24, 24);
+    margin-left: auto;
+    margin-top: -20vw;
+}
+
+.button4{
+    align-items: center;
+}
+
+.model4 .slds-modal{
+    width: 40vw;
+    position: initial;
+}

@@ -1,0 +1,42 @@
+.slds-box_small{
+    width: 90%;
+    align-items: center;
+    margin-left: 2vw;
+    /* position: fixed; */
+    height: 41px;
+    /* margin-bottom: 165px; */
+
+
+
+}
+.slds-dropdown-trigger {
+    /* float: right; */
+    margin-top: -4px;
+    display: inline-block;
+    margin-left: -12px;
+    /* width: 77vw !important;
+    margin-left: -12px; */
+
+}
+
+.lightning-button-menu{
+    font-size: smaller;
+}
+.slds-button_icon-border{
+    line-height: var(--lwc-lineHeightReset,1);
+    vertical-align: middle;
+    color: var(--lwc-colorTextIconDefault,rgb(116, 116, 116));
+    /* border: var(--lwc-borderWidthThin,1px) solid var(--lwc-colorBorderPrimary,rgb(201, 201, 201)); */
+    transition: border .15s linear;
+    /* width: 80vw !important; */
+    /* border-color: var(--lwc-buttonColorBorderPrimary,rgb(201, 201, 201)); */
+}
+
+/* class="slds-button slds-button_icon-bord */
+/* .lightning-primitive-icon{
+    margin-left: 583px;
+}
+
+.slds-button_icon{
+    margin-left: 583px;
+} */

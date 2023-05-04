@@ -1,0 +1,156 @@
+<template>
+
+    <!-- 1st popup -->
+    <div class="popup">
+        <lightning-card  title="Hello">
+            <lightning-button variant="success" label="Open popup1"
+            title="Open popup" onclick={showModalBox1} slot="actions"></lightning-button> 
+            <p class="slds-p-horizontal_small">Card Body (custom component) JHGUYJFCJHHHHHHH
+                Couldn't find the compiled component. If this component has a dependency on a component in the org or 
+                a component in a package in the org, test this component directly in the org.
+                This screen is visible only in development. It will not appear if the app crashes in pr
+                oduction. Open your browser's developer console to further inspect this error.</p>
+            <p slot="footer">Card Footer</p>
+        </lightning-card>
+    
+<template if:true={isShowModal1}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+    <lightning-modal-header label="My Modal Heading"></lightning-modal-header>
+    <lightning-modal-body>This is the modal's contents.</lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button label="OK" onclick={hideModalBox1}></lightning-button>
+    </lightning-modal-footer>
+</section>
+    </template>
+</div>
+ <!-- modal end -->
+
+
+ 
+<!-- 2nd popup -->
+    <div>
+        <lightning-card  title="Hello">
+            <lightning-button variant="success" label="Open popup2"
+            title="Open popup" onclick={showModalBox2} slot="actions"></lightning-button> 
+            <p class="slds-p-horizontal_small">Card Body (custom component) JHGUYJFCJHHHHHHH
+                Couldn't find the compiled component. If this component has a dependency on a component in the org or 
+                a component in a package in the org, test this component directly in the org.
+                This screen is visible only in development. It will not appear if the app crashes in pr
+                oduction. Open your browser's developer console to further inspect this error.</p>
+            <p slot="footer">Card Footer</p>
+        </lightning-card>
+    
+<template if:true={isShowModal2}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+    <lightning-modal-header label="My Modal Heading"></lightning-modal-header>
+    <lightning-modal-body>This is the modal's contents.</lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button label="OK" onclick={hideModalBox2}></lightning-button>
+    </lightning-modal-footer>
+</section>
+    </template>
+</div>
+
+
+    <!-- <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+          <header class="slds-modal__header">
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button>
+             <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">Welcome in Apex Hours</h2>
+          </header>
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                <p>Modal/Popup in Lightning Web Component (LWC) Demo</p>
+          </div>
+
+          <footer class="slds-modal__footer">
+             <button class="slds-button slds-button_neutral" onclick={hideModalBox}>Cancel</button>
+          </footer>
+       
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div> -->
+
+
+
+<!-- 3rd popup -->
+<div class="model-popup3">
+    <lightning-button variant="success" label="Open popup"
+                        title="Open popup" onclick={showModalBox3}>
+    </lightning-button>
+   <!-- modal start -->      
+   <template if:true={isShowModal3}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+        <!-- modal header start -->
+          <header class="slds-modal__header">
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button>
+             <h2 id="modal-heading-03" class="slds-text-heading_medium slds-hyphenate">Welcome in Apex Hours</h2>
+          </header>
+      
+          <!-- modal body start -->
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-3">
+                <p>Modal/Popup in Lightning Web Component (LWC) Demo</p>
+          </div>
+
+          <!-- modal footer start-->
+          <footer class="slds-modal__footer">
+             <button class="slds-button slds-button_neutral" onclick={hideModalBox}>Cancel</button>
+          </footer>
+       
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+ </template>
+</div>
+
+
+<!-- 4th popup -->
+<div class="model-popup4">
+    <lightning-button variant="success" label="Open popup"
+                        title="Open popup" onclick={showModalBox4}>
+    </lightning-button>
+   <!-- modal start -->      
+   <template if:true={isShowModal4}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+        <!-- modal header start -->
+          <header class="slds-modal__header">
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button>
+             <h2 id="modal-heading-04" class="slds-text-heading_medium slds-hyphenate">Welcome in Apex Hours</h2>
+          </header>
+      
+          <!-- modal body start -->
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-4">
+                <p>Modal/Popup in Lightning Web Component (LWC) Demo</p>
+          </div>
+
+          <!-- modal footer start-->
+          <footer class="slds-modal__footer">
+             <button class="slds-button slds-button_neutral" onclick={hideModalBox}>Cancel</button>
+          </footer>
+       
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+ </template>
+</div>
+
+</template>

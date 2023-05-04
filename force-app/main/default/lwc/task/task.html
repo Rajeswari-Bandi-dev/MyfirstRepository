@@ -1,0 +1,21 @@
+<template>
+    <input
+                            type="text"
+                            class={getInputClass}
+                            aria-autocomplete="list"
+                            aria-controls="listbox"
+                            autocomplete="off"
+                            role="textbox"
+                            id="combobox"
+                            placeholder={placeholder}
+                            value={getInputValue}
+                            title={getInputTitle}
+                            readonly={isInputReadonly}
+                            disabled={disabled}
+                            onfocus={handleFocus}
+                            onblur={handleBlur}
+                            oninput={handleInput}
+                            onkeydown={handleKeyDown}
+                        />
+    
+</template>

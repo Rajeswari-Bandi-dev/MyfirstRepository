@@ -1,0 +1,115 @@
+<template>
+    
+    <lightning-card>
+    <lightning-record-edit-form object-api-name="Contact">
+<!-- CSS only -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item class="slds-p-around_xx-small" size="12">
+              <lightning-layout>
+
+                <lightning-layout-item class="slds-p-around_xx-small" size=6>
+
+                    <!-- account name -->
+                    <div style="display: inline-flex; width: 51%; " class="slds-m-around_small">
+                        <lightning-input-field  field-name='AccountId'
+                            value={value} onchange={handleChange} required>
+                        </lightning-input-field> 
+                    </div>
+
+                    <!-- firstname -->
+                    <div style="display: inline-flex; width: 51%; " class="slds-m-around_small">
+                        <lightning-input-field field-name='FirstName'></lightning-input-field>
+                    </div>
+
+                    <!-- lastname -->
+                    <div style="display: inline-flex; width: 51%; " class="slds-m-around_small">
+                        <lightning-input-field field-name='LastName'></lightning-input-field>
+                    </div>
+
+                    <!-- leadsource -->
+                    <div style="display: inline-flex; width: 51%;" class="slds-m-around_small">
+                        <lightning-input-field field-name='LeadSource'></lightning-input-field>
+                    </div>
+
+                </lightning-layout-item>
+
+
+                <lightning-layout-item class="slds-p-around_xx-small" size=6>
+
+                    <!-- email -->
+                    <div style="display: inline-flex; width: 51%;;" class="slds-m-around_small">
+                        <lightning-input-field field-name='Email' class="validate" pattern="[A-Za-z0-9._-]+@[a-z0-9-]+\.[a-z]{2,}$" 
+                        message-when-pattern-mismatch="Please enter a valid email"></lightning-input-field>
+                    </div>
+                    
+                    <!-- phone format: 123-456-7890-->
+                    <div style="display: inline-flex; width: 51%;" class="slds-m-around_small">
+                        <lightning-input-field field-name='Phone' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}$" 
+                        message-when-pattern-mismatch="Please enter a valid phone number"></lightning-input-field>
+                    </div>
+
+                    <!-- birthdate -->
+                    <div style="display: inline-flex; width: 51%; height: 15%;" class="slds-m-around_small">
+                          <lightning-input-field field-name='Birthdate' ></lightning-input-field>
+                    </div>
+
+                </lightning-layout-item>                    
+
+
+            </lightning-layout>
+        </lightning-layout-item>
+        </lightning-layout>
+
+        <!-- save button -->
+        <div style="display: inline; width: 51%;" class="slds-m-around_small_button">
+            <lightning-button class="btn btn-primary" type="submit" label="Save" onsuccess={handleSuccess}> </lightning-button>
+        </div>
+
+    </lightning-record-edit-form>
+
+</lightning-card>
+</template>
+
+        <!-- <ul class="slds-list_horizontal"> -->
+            <!-- cancel button -->
+            <!-- <li> -->
+        
+            <!-- cancel button -->
+            <!-- <lightning-button class="btn btn-outline-primary" label="Cancel" onclick={handleCancel}> </lightning-button> 
+            &nbsp; &nbsp;  &nbsp; &nbsp;  -->
+            <!-- save button -->
+            
+        <!-- </li> -->
+            
+        <!-- </li> -->
+        <!-- </ul> -->
+
+
+
+
+
+                    <!-- single selection dropdown -->
+                    <!-- <lightning-combobox name="progress" label="Status" value={value}  placeholder="Select Progress" options={optionss} 
+                    onchange={handledropdown}></lightning-combobox> -->
+<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+<!-- <template>
+    <lightning-record-edit-form object-api-name="Contact" onsuccess={handleSuccess} onsubmit ={handleSubmit}>
+        <lightning-messages>
+        </lightning-messages>
+        <lightning-input-field field-name='AccountId'></lightning-input-field>
+        <lightning-input-field field-name='FirstName'></lightning-input-field>
+        <lightning-input-field field-name='LastName'></lightning-input-field>
+        <lightning-input-field field-name='Email'></lightning-input-field>
+        <lightning-input-field field-name='Phone'></lightning-input-field>
+        <lightning-button class="slds-m-top_small" type="submit" label="Create Contact">
+        </lightning-button>
+    </lightning-record-edit-form>
+</template> -->
+
+
+<!-- <template>
+    <lightning-record-form object-api-name="Contact"
+        fields={fields} onsuccess={handleSuccess}>
+    </lightning-record-form>
+</template> -->

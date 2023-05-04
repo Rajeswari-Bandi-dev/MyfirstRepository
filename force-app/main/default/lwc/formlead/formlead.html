@@ -1,0 +1,91 @@
+<!-- RECORD FORM -->
+<!-- <template>
+    <lightning-card title="View Record">
+    <div class = "button">
+        <lightning-button label="Convert" variant="brand" onclick={convertlead}></lightning-button>
+    </div>
+        <div class="slds-m-around-small">
+            <lightning-record-form record-id = "00Q5i000005l2pyEAA"
+            object-api-name = "Lead"
+            mode= "view"
+            layout-type= "Full"
+            columns ="3"
+            >
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template> -->
+
+
+<!-- RECORD VIEW FORM -->
+<template>
+<lightning-card title="View Record">
+    <div><lightning-record-view-form record-id="00Q5i000005l2pyEAA" object-api-name="Lead">
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-3">                    
+                    <lightning-output-field field-name="Name"></lightning-output-field>
+                    <lightning-output-field field-name="Website"></lightning-output-field>
+                    <lightning-output-field field-name="Status"></lightning-output-field>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-output-field field-name="Industry"></lightning-output-field>
+                    <!-- <lightning-input type="text" value={intNum} label="AnnualRevenue" pattern="[0-9]+" title="numbers only"></lightning-input> -->
+                    <lightning-input type="number" label="AnnualRevenue"></lightning-input>
+                    <lightning-output-field field-name="Phone"></lightning-output-field>
+                </div>
+
+            <div class="slds-col slds-size_1-of-1">
+                <lightning-button label="Convert" title="Show text"  variant="brand" onclick={showModalBox}></lightning-button>
+            </div>
+        </div>
+    </lightning-record-view-form>
+</div>
+</lightning-card>
+
+            
+
+             <!-- pop-up -->      
+   <template if:true={isShowModal}>
+
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+
+        <!-- pop-up header -->
+        <header class="slds-modal__header">
+            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+                <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+            </button>
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Successfully converted</h2>
+        </header>
+
+        <!-- pop-up body -->
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <div class="contentClass">Your lead has been converted to Account Contact and Opportunity</div>
+                <img src="https://curious-koala-o9iohh-dev-ed.lightning.force.com/projRes/ui-lead-runtime-components/images/lead_convert_celebration@2x.gif" alt="Lead Convert Celebration"
+                data-aura-rendered-by="32:6726;a" >
+
+                <!-- Account Tab -->
+                <div class="btn"><a href={url} onclick={accounttab}>Account</a> </div>
+
+
+                <!-- Account Tab -->
+                <!-- <div><a href={url} onclick={contacttab}>Contact</a> </div> -->
+
+                <!-- Account Tab -->
+                <!-- <div><a href={url} onclick={handleClick}>Opportunity Home</a> </div> -->
+
+        </div>
+
+        <!-- pop-up footer -->
+        <footer class="slds-modal__footer">
+            <button class="slds-button slds-button_neutral" onclick={leadpage}>Go to Leads</button>
+        </footer>
+
+        </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+<!-- pop-up end -->
+
+</template>

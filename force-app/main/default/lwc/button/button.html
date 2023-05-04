@@ -1,0 +1,26 @@
+<template>
+<!-- <div if:true={result}>
+    <p>result is true</p>
+</div>
+
+<div if:false={result}>
+    <p>result is false</p>
+</div> -->
+
+<!-- CONDITIONAL RENDERING -->
+
+<lightning-card variant="narrow" title="Conditional Rendering" icon-name="custom:custom14">
+<lightning-input type="checkbox" variant = "standard" name="name" label="terms and conditions" 
+onchange={handlechange}></lightning-input> 
+<div if:true={result}> <p> implemented conditional Rendering</p> </div>
+</lightning-card>
+
+<div class="mainContainer">
+<lightning-input type="text" variant = "standard" name="name" label="name"  placeholder="type here.."></lightning-input> 
+
+<lightning-input type="text" variant = "standard" name="email" label="email"  placeholder="type here.."></lightning-input> 
+
+<lightning-input type="password" variant = "standard" name="password" label="password"  placeholder="type here.."></lightning-input> 
+</div>
+
+</template>

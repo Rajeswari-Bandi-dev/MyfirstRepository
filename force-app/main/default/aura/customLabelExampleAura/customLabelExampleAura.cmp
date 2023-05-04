@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <lightning:card>
+    	{!$Label.c.HomePageNewsLabel}
+    </lightning:card>
+</aura:component>

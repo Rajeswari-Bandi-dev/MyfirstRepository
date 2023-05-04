@@ -1,0 +1,14 @@
+.containerPadre {
+    height: 10cm;
+    width: 30cm;
+    background-color: #001489;
+    text-align: center;
+}
+
+.lgc-bg {
+    text-align: center;
+}
+.labelText {
+        text-align: center;
+    padding-top: 0.5cm;
+}

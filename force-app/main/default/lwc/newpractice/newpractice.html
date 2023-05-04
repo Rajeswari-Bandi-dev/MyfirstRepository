@@ -1,0 +1,19 @@
+<template>
+    <!-- <lightning-card title="Get picklist values of LeadSource field from Contact " icon-name="standard:contact"> -->
+     
+        <div class="slds-m-around_medium">
+     
+            <template if:true={ContactPicklist.data}>
+     
+                <lightning-combobox name="LeadSource" label="Lead Source" value={LeadSourceval}
+     
+                    options={ContactPicklist.data.values} onchange={handleChange}>
+     
+                </lightning-combobox>
+     
+            </template>        
+     
+        </div>
+     
+       <!-- </lightning-card>  -->
+    </template>

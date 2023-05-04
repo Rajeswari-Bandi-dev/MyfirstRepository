@@ -1,0 +1,32 @@
+.style{
+    text-align:left;
+    color: black;
+    background-color: red;
+    margin: 5px;
+    width: 5px;
+}
+
+:host {
+    --sds-c-textarea-sizing-min-height: 10em; 
+    border-style: double;
+    border-color:chocolate;
+    display:block;
+}
+
+.slds-text-heading_small {
+    color: blue;
+}
+
+.slds-form-element__label{
+    font-weight: bold;
+}
+
+@media screen and (min-width: 601px) {
+    .THIS .example {
+      font-size: 15px;
+    }}
+
+  @media screen and (max-width: 600px) {
+    .THIS .example {
+      font-size: 10px;
+    }}
